@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-6Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'S-CoreDream-3Light';
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #bcd7ea;
+    height: 100px;
+    padding: 0 4rem;
+    color: #4d6c40;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+/* Navigation */
+.navbar .menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+   display: block;
+   color: #ffffff;
+   text-decoration: none;
+   font-size: 1.3rem;
+   font-family: 'S-CoreDream-6Bold';
+}
+
+.navbar a:hover{
+   color: #4d6c40;
+   transform: scale(1.3); 
+   transition: 0.3s;
+}
+
+.menu_m{
+   display: flex;
+   position: relative;
+   text-align: center;
+   width: 150px;
+   height: 100px;
+   padding: 1.5rem;
+   z-index: 1;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.submenu {
+   overflow: hidden;         /* 넘치는 걸 숨기기 */
+   max-height: 0;            /* 처음엔 높이 0 */
+   opacity: 0;               /* 처음엔 투명 */
+   transition: all 0.5s ease; /* 부드럽게 전환 */
+   position: absolute;
+   left: 0;
+   background-color: #bcd7ea;
+   min-width: 180px;
+   top: 100%;
+   padding-bottom: px;
+}
+
+.submenu li a{
+   color: #ffffff;
+   padding: 10px;
+   text-decoration: none;
+   font-weight: normal;
+   font-size: 0.875rem;
+}
+
+.submenu li a:hover{
+   background-color: #4d6c40;
+   color: #ffffff;
+   font-family: 'S-CoreDream-6Bold';
+}
+
+.menu_m:hover .submenu {
+   max-height: 500px;    /* 서브메뉴가 충분히 다 보이게 */
+   opacity: 1;           /* 완전 보이게 */
+}
+
+
+main.content {
+  background:  #4d6c40;
+}
+
+/* 내용용 */
+
+h1{
+  margin-top: 40px;
+  color: black;
+  text-align: center;
+  font-family: 'S-CoreDream-6Bold';
+  font-size: 3rem;
+}
+
+
+.about-wrapper {
+  max-width: 1100px;
+  height: 1800px;
+  margin: 3rem auto;
+  padding: 40px;
+  background-color: #e9e9e9;
+  border: 2px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.box {
+  display: flex;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.text b {
+  font-size: 16px;
+  color: #333;
+}
+
+.highlight {
+  background-color: #f5c7a48f;
+  border-left: 3px solid #f1832c;
+  padding-left: 8px;
+  margin-bottom: 5px;
+}
+
+/* 푸터 */
+.site-footer {
+  background-color: #bcd7ea;
+  color: #4d6c40;
+  padding: 1rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.footer-info a {
+  color: #f1832c;
+  text-decoration: underline;
+}
+
+.footer-info a:hover {
+  color: #4d6c40;
+}
